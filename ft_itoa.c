@@ -44,6 +44,6 @@ char		*ft_itoa(int n)
 		str[len-- - 1] = (char)((nl % 10) + '0');
 		nl /= 10;
 	}
-	str[len - 1] = (char)(nl + '0');
+	str[len - 1] = (char)((nl % 10) + '0');
 	return (str);
 }
