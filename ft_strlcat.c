@@ -17,6 +17,7 @@ size_t		ft_strlcat(char *dst, char const *src, size_t dstsize)
     size_t  totalsize;
     size_t  ogdstsize;
 	
+	ogdstsize = dstsize;
 	totalsize = ft_strlen(dst) + ft_strlen(src);
 	while (*dst && dstsize)
 	{
