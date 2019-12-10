@@ -27,7 +27,7 @@ size_t		ft_strlcat(char *dst, char const *src, size_t dstsize)
 	{
 	   return (ogdstsize + ft_strlen(src));
 	}
-	while (*src && dstsize)
+	while (*src && dstsize > 1)
 	{
 	   *dst++ = *src++;
 	   dstsize--;
