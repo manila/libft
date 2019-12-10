@@ -28,7 +28,7 @@ char		*ft_itoa(int n)
 	int		len;
 	char	*str;
 
-	nl = n;
+	nl = (long)n;
 	len = ft_intlen(n);
 	str = ft_strnew(len);
 	if (str == NULL)
