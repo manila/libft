@@ -33,9 +33,9 @@ size_t		ft_strlcat(char *dst, char const *src, size_t dstsize)
 			i++;
 		}
 		dst[dstlen + i] = '\0';
-		if (dstsize - (dstlen + srclen) == 0)
-			dst[dstlen + srclen - 1] = '\0';
-		return (dstlen + srclen);
+		if (dstsize - (dstlen + i) == 0)
+			dst[dstlen + i - 1] = '\0';
+		return (dstlen + i);
 	}
 	return (dstsize + srclen);
 }
