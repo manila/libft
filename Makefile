@@ -6,12 +6,13 @@
 #    By: mnila <mnila@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/03 17:39:46 by mnila             #+#    #+#              #
-#    Updated: 2019/12/08 13:25:08 by mnila            ###   ########.fr        #
+#    Updated: 2019/12/10 19:24:53 by mnila            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC = ft_memset.c \
+SRC = \
+ft_memset.c \
 ft_bzero.c \
 ft_memcpy.c \
 ft_memccpy.c \

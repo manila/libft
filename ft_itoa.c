@@ -6,7 +6,7 @@
 /*   By: mnila <mnila@student.42.us.org>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/04 15:50:42 by mnila             #+#    #+#             */
-/*   Updated: 2019/12/10 15:40:49 by mnila            ###   ########.fr       */
+/*   Updated: 2019/12/10 19:24:30 by mnila            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,41 @@
 
 static int	ft_intlen(int n)
 {
+	int		len;
+
+	len = 1;
 	if (n < 0)
-		return (2 + ft_intlen(-(n / 10)));
-	else if (n / 10)
-		return (1 + ft_intlen(n / 10));
-	else
-		return (1);
+		len++;
+	while (n / 10 != 0)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
 }
 
 char		*ft_itoa(int n)
 {
 	long	nl;
+	char	*s;
 	int		len;
-	char	*str;
 
 	nl = (long)n;
 	len = ft_intlen(n);
-	str = ft_strnew(len);
-	if (str == NULL)
+	s = ft_strnew(len);
+	if (s == NULL)
 		return (NULL);
-	if (nl == 0)
-		str[0] = '0';
-	str[len] = '\0';
+	s[len--] = '\0';
 	if (nl < 0)
 	{
-		str[0] = '-';
-		nl = -nl;
+		s[0] = '-';
+		nl = nl * -1;
 	}
-	while (len >= 0 && nl)
+	while (nl / 10)
 	{
-		str[len-- - 1] = (char)((nl % 10) + '0');
+		s[len--] = (char)((nl % 10) + '0');
 		nl /= 10;
 	}
-	return (str);
+	s[len] = (char)((nl % 10) + '0');
+	return (s);
 }
