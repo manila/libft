@@ -6,7 +6,7 @@
 #    By: mnila <mnila@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/03 17:39:46 by mnila             #+#    #+#              #
-#    Updated: 2019/12/10 19:24:53 by mnila            ###   ########.fr        #
+#    Updated: 2019/12/11 21:44:02 by mnila            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ ft_isdigit.c \
 ft_isalnum.c \
 ft_isascii.c \
 ft_isprint.c \
+ft_isblank.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_strsplit.c \
@@ -73,8 +74,12 @@ ft_lstmap.c \
 ft_isspace.c \
 ft_min.c \
 ft_max.c \
+ft_abs.c \
 ft_islower.c \
-ft_isupper.c
+ft_isupper.c \
+ft_strlcpy.c \
+ft_swap.c \
+ft_strrev.c
 
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra 
