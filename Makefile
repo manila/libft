@@ -6,12 +6,14 @@
 #    By: mnila <mnila@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/03 17:39:46 by mnila             #+#    #+#              #
-#    Updated: 2019/12/12 22:20:25 by mnila            ###   ########.fr        #
+#    Updated: 2019/12/12 22:40:09 by mnila            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC = clang
+CFLAGS = -Wall -Werror -Wextra 
 NAME = libft.a
-SRC = \
+SRCS = \
 ft_memset.c \
 ft_bzero.c \
 ft_memcpy.c \
@@ -80,19 +82,19 @@ ft_isupper.c \
 ft_swap.c \
 ft_strrev.c
 
-CC = gcc
-CFLAGS = -Wall -Werror -Wextra 
+OBJS = $(SRCS:.c=.o)
+INC = libft.h
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(CFLAGS) -c $(SRC)
-	ar rcs $(NAME) *.o
+	$(CC) $(CFLAGS) -I $(INC) -c $(SRCS)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f *.o
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
