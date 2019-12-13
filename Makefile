@@ -6,7 +6,7 @@
 #    By: mnila <mnila@student.42.us.org>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/03 17:39:46 by mnila             #+#    #+#              #
-#    Updated: 2019/12/11 21:44:02 by mnila            ###   ########.fr        #
+#    Updated: 2019/12/12 22:20:25 by mnila            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,6 @@ ft_max.c \
 ft_abs.c \
 ft_islower.c \
 ft_isupper.c \
-ft_strlcpy.c \
 ft_swap.c \
 ft_strrev.c
 
